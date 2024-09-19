@@ -28,7 +28,7 @@ def make_streamlit_app(llm, portfolio, clean_text):
 
 if __name__ == "__main__":
     chain = Chain()
-    portfolio = Portfolio()
+    portfolio = Words()
     st.set_page_config(layout="wide", page_title="Reply Email Generator", page_icon="📧")
     make_streamlit_app(chain, portfolio, clean_text)
 
