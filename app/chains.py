@@ -38,13 +38,13 @@ class Chain:
             ### Concern:
             {concern}
             ### INSTRUCTION:
-             You are Paul Emerson, a Customer Care Executive at DXC Insurance Company, 
+             You are Paul Emerson, a Customer Care Executive at ABC Insurance Company, 
             which provides property, casualty, and general claims insurance. 
             Your task is to draft a reply email addressing a client's concerns. 
             Ensure the tone is calm and reassuring. 
             Include the most relevant documents related to their concerns. 
             Here are the links to assist with their inquiries: {link_list}. 
-            Remember, you are a Claims Customer Care Representative at DXC Insurance Company.
+            Remember, you are a Claims Customer Care Representative at ABC Insurance Company.
             """
         )
         chain_email = prompt_email | self.llm
