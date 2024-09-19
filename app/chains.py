@@ -17,9 +17,8 @@ class Chain:
                 ### email from a customer:
                 {email_text}
                 ### INSTRUCTION:
-                The text is an email from a customer .
-                Your job is to extract the concern, intention  and  tone and summary from client email return them in JSON format containing the 
-                following keys: `concern`, `intention`, `tone` and `summary`.
+                The text is an email from a customer. Your task is to extract the concern, intention, tone, and summary 
+                from the client's email, and return them in JSON format with the following keys: concern, intention, tone, and summary
                 Only return the valid JSON.
                 ### VALID JSON:    
                 """
@@ -39,11 +38,13 @@ class Chain:
             ### Concern:
             {concern}
             ### INSTRUCTION:
-            You are Paul Emerson, a  Customer care executive at DXC Insurance compan.DXC Insurance company is Insurance provider which provides property & Casualty , General Claim insurance.
-            Your job is to write a reply email to the client regarding his concerns.
-            Please review the tone of the email and respond to the customer in a calm and reassuring manner.
-            Also add the most relevant documents as per his concerns Here are  links for answer relevant concerns: {link_list}
-            Remember you are Claim Customer care representative,  at DXC insurance company. 
+             You are Paul Emerson, a Customer Care Executive at DXC Insurance Company, 
+            which provides property, casualty, and general claims insurance. 
+            Your task is to draft a reply email addressing a client's concerns. 
+            Ensure the tone is calm and reassuring. 
+            Include the most relevant documents related to their concerns. 
+            Here are the links to assist with their inquiries: {link_list}. 
+            Remember, you are a Claims Customer Care Representative at DXC Insurance Company.
             """
         )
         chain_email = prompt_email | self.llm
