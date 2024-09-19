@@ -29,7 +29,7 @@ class Chain:
             json_parser = JsonOutputParser()
             res = json_parser.parse(res.content)
         except OutputParserException:
-            raise OutputParserException("Context too big. Unable to parse jobs.")
+            raise OutputParserException("Context too big..")
         return res if isinstance(res, list) else [res]
 
     def write_mail(self, concern, links):
